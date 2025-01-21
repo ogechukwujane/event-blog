@@ -2,9 +2,19 @@
   <main class="wrapper">
     <div class="content container mx-auto px-4 md:px-12 xl:px-0">
       <div class="flexbox">
-        <img src="public/images/logo.svg" alt="logo" class="logo" />
+        <img
+          src="public/images/logo.svg"
+          alt="logo"
+          class="logo"
+          loading="lazy"
+        />
         <div class="phoneWrap">
-          <img src="public/images/phone.svg" alt="phone" class="phone" />
+          <img
+            src="public/images/phone.svg"
+            alt="phone"
+            class="phone"
+            loading="lazy"
+          />
           <NuxtLink to="#">
             <p class="phoneText">+1 (628) 587-3235</p></NuxtLink
           >
@@ -17,11 +27,13 @@
             src="public/images/hambuger.svg"
             alt="menu"
             class="cursor-pointer"
+            loading="lazy"
           />
           <img
             src="public/images/profile.svg"
             alt="profile"
             class="cursor-pointer"
+            loading="lazy"
           />
         </div>
       </div>

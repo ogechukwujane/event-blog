@@ -1,5 +1,7 @@
 <template>
-  <button class="button">{{ btnText }}</button>
+  <button class="button" type="submit" @click="handleClick">
+    {{ btnText }}
+  </button>
 </template>
 
 <script>
@@ -8,6 +10,17 @@ export default {
     btnText: {
       type: String,
       required: true,
+    },
+    onClick: {
+      type: Function,
+      required: false,
+    },
+  },
+  methods: {
+    handleClick() {
+      if (this.onClick) {
+        this.onClick();
+      }
     },
   },
 };

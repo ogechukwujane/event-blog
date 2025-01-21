@@ -22,9 +22,6 @@ useHead({
 </script>
 
 <style>
-body {
-  font-family: "Inter";
-}
 div,
 h1,
 h2,

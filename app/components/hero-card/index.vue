@@ -1,27 +1,46 @@
 <template>
-  <div class="cardWrapper">
+  <div class="cardWrapper" @click="handleCardClick(blog)">
     <div class="imageWrap">
-      <img src="public/images/logo.svg" alt="img" class="bgImage" />
+      <img
+        :src="blog.image || '/images/logo.svg'"
+        alt="img"
+        class="bgImage"
+        loading="lazy"
+      />
     </div>
     <div class="content">
-      <p class="date">08.08.2021</p>
-      <h3 class="title">Top Trends in Corporate Event Design and Engagement</h3>
+      <p class="date">{{ blog.createdAt + "08.08.2021" }}</p>
+      <h3 class="title">{{ blog.title }}</h3>
       <p class="paragraph">
-        Progressively incentivize cooperative systems through technically sound
-        functionalities. Credibly productivate seamless data with flexible
-        functionalities. Credibly productivate seamless data with flexible
-        schemas.
+        {{ blog.description }}
       </p>
       <div class="line" />
       <div class="footer">
-        <span>Corporate Events</span>
+        <span>{{ blog.category }}</span>
         <button>
-          Read <img src="public/images/right-arrow.svg" alt="arrow" />
+          Read
+          <img src="public/images/right-arrow.svg" alt="arrow" loading="lazy" />
         </button>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+const router = useRouter();
+
+defineProps({
+  blog: {
+    type: Object,
+    required: true,
+  },
+});
+
+const handleCardClick = (blog) => {
+  const postId = blog.id;
+  router.push(`/post/${postId}`);
+};
+</script>
 
 <style scoped>
 .cardWrapper {

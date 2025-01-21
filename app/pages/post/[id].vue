@@ -1,22 +1,35 @@
 <template>
   <div class="wrapper">
     <div class="header">
-      <h3 class="title">Top Trends in Corporate Event Design and Engagement</h3>
-      <p class="date">08.08.2021</p>
+      <h3 class="title">{{ data.title }}</h3>
+      <p class="date">{{ data.createdAt }}</p>
     </div>
     <div class="imageWrap">
-      <img src="public/images/logo.svg" alt="img" class="bgImage" />
+      <img
+        :src="data.image || '/images/logo.svg'"
+        alt="img"
+        class="bgImage"
+        loading="lazy"
+      />
     </div>
     <div class="content">
       <p class="paragraph">
-        Progressively incentivize cooperative systems through technically sound
-        functionalities. Credibly productivate seamless data with flexible
-        functionalities. Credibly productivate seamless data with flexible
-        schemas.
+        {{ data.description }}
+      </p>
+      <p class="paragraph">
+        {{ data.content }}
       </p>
     </div>
   </div>
 </template>
+
+<script setup>
+const route = useRoute();
+
+const { data, pending, error, refresh } = await useFetch(
+  `${useRuntimeConfig().public.baseUrl}/post/${route.params.id}`
+);
+</script>
 
 <style scoped>
 .wrapper {
@@ -27,7 +40,6 @@
   padding: 4rem 0px;
   @media (max-width: 600px) {
     flex-direction: column;
-    gap: 0.375rem;
   }
 }
 .header {
@@ -55,10 +67,14 @@
   color: #222222b2;
 }
 .imageWrap {
-  width: 100%;
-  height: 25.813rem;
+  width: 80%;
+  height: 35rem;
   position: relative;
   background: #6c757d;
+  @media (max-width: 1024px) {
+    height: 25.813rem;
+    width: 100%;
+  }
   @media (max-width: 600px) {
     height: 18.75rem;
   }
@@ -72,6 +88,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
   @media (max-width: 768px) {
     width: 90%;
   }
