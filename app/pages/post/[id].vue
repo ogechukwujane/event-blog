@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="header">
       <h3 class="title">{{ data.title }}</h3>
-      <p class="date">{{ data.createdAt }}</p>
+      <p class="date">{{ convertDay(data.createdAt) }}</p>
     </div>
     <div class="imageWrap">
       <img

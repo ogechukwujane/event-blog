@@ -10,7 +10,7 @@
       />
     </div>
     <div class="content">
-      <p class="date">{{ blog.createdAt }}</p>
+      <p class="date">{{ convertDay(blog.createdAt) }}</p>
       <h3 class="title">{{ blog.title }}</h3>
       <p class="paragraph">
         {{ blog.description }}
