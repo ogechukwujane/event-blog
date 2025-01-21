@@ -21,6 +21,11 @@
   display: flex;
   flex-direction: column;
   width: calc(33% - 13px);
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.03);
+    animation: ease-in-out;
+  }
   @media (max-width: 1024px) {
     width: calc(50% - 13px);
   }

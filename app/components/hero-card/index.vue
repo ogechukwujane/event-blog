@@ -1,7 +1,6 @@
 <template>
   <div class="cardWrapper">
     <div class="imageWrap">
-      <span>CORPORATE EVENTS</span>
       <img src="public/images/logo.svg" alt="img" class="bgImage" />
     </div>
     <div class="content">
@@ -33,9 +32,14 @@
   overflow: hidden;
   background: #ffffff;
   box-shadow: 6px 6px 54px 0px #0000000d;
+  cursor: pointer;
   @media (max-width: 600px) {
     flex-direction: column;
     gap: 0.375rem;
+  }
+  &:hover {
+    transform: scale(1.03);
+    animation: ease-in-out;
   }
 }
 .imageWrap {

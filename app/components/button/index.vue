@@ -12,5 +12,9 @@
   font-size: 0.875rem;
   font-weight: 500;
   background: transparent;
+  &:hover {
+    transform: scale(1.05);
+    animation: ease-in-out;
+  }
 }
 </style>
