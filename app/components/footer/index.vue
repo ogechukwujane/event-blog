@@ -4,7 +4,11 @@
       <div class="content">
         <div class="flexbox">
           <NuxtLink to="#"
-            ><img src="public/images/logo.svg" alt="logo" class="logo"
+            ><img
+              src="public/images/logo.svg"
+              alt="logo"
+              class="logo"
+              loading="lazy"
           /></NuxtLink>
           <div class="linkWrap linkText">
             <NuxtLink to="#"><p>About Us</p></NuxtLink>
@@ -18,13 +22,23 @@
           <p class="subTitle">Contacts</p>
           <div class="column">
             <div class="iconFlex">
-              <img src="public/images/mail.svg" alt="email" class="icon" />
+              <img
+                src="public/images/mail.svg"
+                alt="email"
+                class="icon"
+                loading="lazy"
+              />
               <NuxtLink to="#"
                 ><p class="linkText">contact@eventsinminutes.com</p></NuxtLink
               >
             </div>
             <div class="iconFlex">
-              <img src="public/images/phone.svg" alt="phone" class="icon" />
+              <img
+                src="public/images/phone.svg"
+                alt="phone"
+                class="icon"
+                loading="lazy"
+              />
               <NuxtLink to="#"
                 ><p class="linkText">+1 (628) 587-3235</p></NuxtLink
               >

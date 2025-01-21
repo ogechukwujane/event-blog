@@ -1,29 +1,58 @@
 <template>
-  <div class="container mx-auto px-4 md:px-12 xl:px-0 py-8">
+  <h1 v-if="pending">Loading...</h1>
+  <h1 v-else-if="error">Something went wrong</h1>
+  <div v-else class="container mx-auto px-4 md:px-12 xl:px-0 py-8">
     <section class="heroSection">
-      <div class="textWrap">
+      <div class="textWrap" v-if="blogs.length > 0">
         <p class="title">Events in Minutes Ideas</p>
         <p class="paragraph">
           Welcome to our Ideas Hub, where we share tips. trends and inspiration
           for unforgettable events.
         </p>
       </div>
-      <HeroCard />
+      <HeroCard :blog="blogs[0]" />
     </section>
     <section class="blogSection">
       <p class="subTitle">Popular Articles</p>
       <div class="grid">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <BlogCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
       </div>
-      <Button :btnText="'More'" />
+      <Button :btnText="'More'" :onClick="loadMore" />
     </section>
   </div>
 </template>
+
+<script setup>
+const currentPage = ref(1);
+const blogs = ref([]);
+
+const fetchBlogs = async () => {
+  const { data, pending, error, refresh } = await useFetch(
+    `${useRuntimeConfig().public.baseUrl}/post?page=${
+      currentPage.value
+    }&limit=12`,
+    {
+      server: true,
+      static: true,
+    }
+  );
+
+  if (data.value) {
+    blogs.value = [...blogs.value, ...data.value];
+  }
+
+  if (error.value) {
+    alert("Failed to fetch blogs:", error.value);
+  }
+};
+
+await fetchBlogs();
+
+const loadMore = async () => {
+  currentPage.value += 1;
+  await fetchBlogs();
+};
+</script>
 
 <style scoped>
 .heroSection {

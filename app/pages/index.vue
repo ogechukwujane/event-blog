@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper">
     <section class="imageWrap">
-      <img src="public/images/logo.svg" alt="bg" />
+      <img src="public/images/logo.svg" alt="bg" loading="lazy" />
     </section>
     <section class="formSection">
       <div class="textWrap">
         <p class="title">Login</p>
         <p class="paragraph">Welcome, Login to access our posts.</p>
       </div>
-      <form action="">
+      <form @submit.prevent="handleLogin">
         <Input
           :label="'User Name'"
           v-model="username"
@@ -27,10 +27,19 @@
   </div>
 </template>
 
-<script>
+<script setup>
 definePageMeta({
   layout: "",
 });
+
+// const { login } = useAuthStore();
+// const username = ref("");
+// const password = ref("");
+
+// const handleLogin = () => {
+//   login();
+//   navigateTo("/post");
+// };
 </script>
 
 <style scoped>
