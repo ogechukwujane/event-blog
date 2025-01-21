@@ -1,6 +1,17 @@
 <template>
-  <button class="button">click me</button>
+  <button class="button">{{ btnText }}</button>
 </template>
+
+<script>
+export default {
+  props: {
+    btnText: {
+      type: String,
+      required: true,
+    },
+  },
+};
+</script>
 
 <style>
 .button {
@@ -14,7 +25,7 @@
   background: transparent;
   &:hover {
     transform: scale(1.05);
-    animation: ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
 }
 </style>

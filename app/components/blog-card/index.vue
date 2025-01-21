@@ -24,7 +24,7 @@
   cursor: pointer;
   &:hover {
     transform: scale(1.03);
-    animation: ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
   @media (max-width: 1024px) {
     width: calc(50% - 13px);
