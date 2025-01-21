@@ -39,7 +39,7 @@
   }
   &:hover {
     transform: scale(1.03);
-    animation: ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
 }
 .imageWrap {
