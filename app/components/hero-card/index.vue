@@ -1,7 +1,6 @@
 <template>
   <div class="cardWrapper">
     <div class="imageWrap">
-      <span>CORPORATE EVENTS</span>
       <img src="public/images/logo.svg" alt="img" class="bgImage" />
     </div>
     <div class="content">
