@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="footerWrap container mx-auto">
+    <div class="footerWrap container mx-auto px-4 md:px-12 xl:px-0 py-8">
       <div class="content">
         <div class="flexbox">
           <NuxtLink to="#"
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="copyWriteWrap">
-        <div class="linkWrap">
+        <div class="footerFlex">
           <NuxtLink to="#"> <p class="footerText">Privacy Policy</p></NuxtLink>
           <span />
           <NuxtLink to="#">
@@ -59,12 +59,16 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 2.5rem 0;
 }
 .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: unset;
+    gap: 1.25rem;
+  }
 }
 .flexbox {
   display: flex;
@@ -80,6 +84,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: unset;
+    gap: 1rem;
+  }
 }
 .column {
   display: flex;
@@ -111,6 +120,16 @@
   justify-content: space-between;
   padding: 1.5rem 0 0 0;
   border-top: 1px solid #6a6a6a1a;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: unset;
+    gap: 1rem;
+  }
+}
+.footerFlex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 span {
   width: 0.25rem;

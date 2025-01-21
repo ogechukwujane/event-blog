@@ -1,6 +1,6 @@
 <template>
   <main class="wrapper">
-    <div class="content container mx-auto">
+    <div class="content container mx-auto px-4 md:px-12 xl:px-0">
       <div class="flexbox">
         <img src="public/images/logo.svg" alt="logo" class="logo" />
         <div class="phoneWrap">
@@ -55,6 +55,9 @@
   display: flex;
   align-items: center;
   gap: 0.625rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .phone {
   width: 1.25rem;
@@ -68,6 +71,9 @@
   font-size: 0.875rem;
   line-height: 140%;
   font-weight: 600;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .iconFlex {
   display: flex;
