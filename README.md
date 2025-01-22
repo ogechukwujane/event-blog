@@ -28,11 +28,11 @@ The project follows a modular and well-organized structure. The application fold
 
 ## Key Folders:
 
-components/: Contains reusable UI components.
-layouts/: Contains all the dynamic layout for this application
-pages/: Holds all the page route of the application.
-utils/: Holds utility functions and helper methods.
-public/images/: Holds the application's assets such as images and icons
+- components/: Contains reusable UI components.
+- layouts/: Contains all the dynamic layout for this application
+- pages/: Holds all the page route of the application.
+- utils/: Holds utility functions and helper methods.
+- public/images/: Holds the application's assets such as images and icons
 
 ## Routing
 
