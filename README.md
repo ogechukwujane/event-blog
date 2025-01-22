@@ -57,8 +57,10 @@ The css scoped styles was used for styling within components. Additionally, I le
 All sensitive data, such as API keys, credentials, and configuration details, are stored in the .env file. This file is critical for security and was not pushed to the repository. Create a .env file at the root directory.
 Ensure that the .env file is correctly set up before running the application.
 
+ - Note: You will get the env sample from the ".env.example" file in the root directory. Use the url there to create your env file
+
 ## Conclusion
 
 The Event in Minutes Blog application follows a clean, modular structure to ensure maintainability and scalability.
 
-Check out the [deployment url](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check out the [deployment url](https://event-blog-ce0dp97vt-giftieapp.vercel.app/post) for more information.

@@ -17,7 +17,11 @@
       <div class="grid">
         <BlogCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
       </div>
-      <Button :btnText="'More'" :onClick="loadMore" />
+      <Button
+        :btnText="isLoading ? 'Loading...' : 'More'"
+        :onClick="loadMore"
+        :loading="isLoading"
+      />
     </section>
   </div>
 </template>
@@ -25,9 +29,11 @@
 <script setup>
 const currentPage = ref(1);
 const blogs = ref([]);
+const isLoading = ref(false);
 
 const fetchBlogs = async () => {
-  const { data, pending, error, refresh } = await useFetch(
+  isLoading.value = true;
+  const { data, pending, error } = await useFetch(
     `${useRuntimeConfig().public.baseUrl}/post?page=${
       currentPage.value
     }&limit=12`,
@@ -38,10 +44,12 @@ const fetchBlogs = async () => {
   );
 
   if (data.value) {
+    isLoading.value = false;
     blogs.value = [...blogs.value, ...data.value];
   }
 
   if (error.value) {
+    isLoading.value = false;
     alert("Failed to fetch blogs:", error.value);
   }
 };
@@ -49,6 +57,7 @@ const fetchBlogs = async () => {
 await fetchBlogs();
 
 const loadMore = async () => {
+  if (isLoading.value) return;
   currentPage.value += 1;
   await fetchBlogs();
 };

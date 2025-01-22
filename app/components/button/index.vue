@@ -1,5 +1,5 @@
 <template>
-  <button class="button" type="submit" @click="handleClick">
+  <button class="button" type="submit" :disabled="loading" @click="handleClick">
     {{ btnText }}
   </button>
 </template>
@@ -14,6 +14,10 @@ export default {
     onClick: {
       type: Function,
       required: false,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {
