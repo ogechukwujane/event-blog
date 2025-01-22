@@ -74,4 +74,4 @@ Ensure that the .env file is correctly set up before running the application.
 
 The Event in Minutes Blog application follows a clean, modular structure to ensure maintainability and scalability.
 
-Check out the [deployment url](https://event-blog-ce0dp97vt-giftieapp.vercel.app/post) for more information.
+Check out the [deployment url](https://event-blog-ce0dp97vt-giftieapp.vercel.app) for more information.
