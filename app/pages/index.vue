@@ -32,14 +32,11 @@ definePageMeta({
   layout: "",
 });
 
-// const { login } = useAuthStore();
-// const username = ref("");
-// const password = ref("");
+const router = useRouter();
 
-// const handleLogin = () => {
-//   login();
-//   navigateTo("/post");
-// };
+const handleLogin = () => {
+  router.push("/post");
+};
 </script>
 
 <style scoped>
