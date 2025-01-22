@@ -4,72 +4,61 @@ An Ideas Hub, where we share tips, trends and inspiration for unforgettable even
 
 ## Setup
 
-Make sure to install dependencies:
+To run the project locally, follow these steps:
+
+- Clone the repository.
+- Install dependencies using
 
 ```bash
 # npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+- Run the development server:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+After setting up, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Build the application for production:
+## Project Structure
 
-```bash
-# npm
-npm run build
+The project follows a modular and well-organized structure. The application folders are housed within the app folder, with folder and file names following kebab-case naming conventions for consistency.
 
-# pnpm
-pnpm build
+## Key Folders:
 
-# yarn
-yarn build
+components/: Contains reusable UI components.
+layouts/: Contains all the dynamic layout for this application
+pages/: Holds all the page route of the application.
+utils/: Holds utility functions and helper methods.
+public/images/: Holds the application's assets such as images and icons
 
-# bun
-bun run build
-```
+## Routing
 
-Locally preview production build:
+The platform uses Nuxt.js Routing for navigation between different pages. Key routing conventions include:
 
-```bash
-# npm
-npm run preview
+Square brackets ([ ]): Used for dynamic routes, such as displaying single blog page.
 
-# pnpm
-pnpm preview
+## API Source
 
-# yarn
-yarn preview
+I leveraged the [MockAPI](https://mockapi.io/projects) to create a quick and easy REST API for the blog posts.
 
-# bun
-bun run preview
-```
+## State Management
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+State management is handled efficiently using Nuxt 3's useFetch. This built-in tool simplifies API data fetching, caching, and synchronization, reducing the need for complex state management solutions.
+
+## Styling
+
+The css scoped styles was used for styling within components. Additionally, I leverage the design library [Tailwind](https://tailwindcss.com/docs) for a consistent, accessible, and responsive user interface across the platform.
+
+## Environment Variables
+
+All sensitive data, such as API keys, credentials, and configuration details, are stored in the .env file. This file is critical for security and was not pushed to the repository. Create a .env file at the root directory.
+Ensure that the .env file is correctly set up before running the application.
+
+## Conclusion
+
+The Event in Minutes Blog application follows a clean, modular structure to ensure maintainability and scalability.
+
+Check out the [deployment url](https://nuxt.com/docs/getting-started/deployment) for more information.
