@@ -53,7 +53,7 @@ const handleLogin = () => {
 .imageWrap {
   width: 100%;
   height: 100%;
-  background: #6c757d;
+  background: var(--color-gray-900);
   img {
     width: 100%;
     height: 100%;
@@ -82,13 +82,13 @@ const handleLogin = () => {
   font-size: 3rem;
   line-height: 140%;
   font-weight: 700;
-  color: #222222;
+  color: var(--primary-color-900);
 }
 .paragraph {
   font-size: 1.25rem;
   line-height: 28px;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
 }
 form {
   display: flex;

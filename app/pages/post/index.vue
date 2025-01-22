@@ -65,7 +65,7 @@ const loadMore = async () => {
 
 <style scoped>
 .heroSection {
-  border-bottom: 1px solid #6a6a6a33;
+  border-bottom: 1px solid var(--color-gray-300);
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
@@ -81,19 +81,19 @@ const loadMore = async () => {
   font-size: 3rem;
   line-height: 67.2px;
   font-weight: 700;
-  color: #222222;
+  color: var(--primary-color-900);
 }
 .paragraph {
   font-size: 1.25rem;
   line-height: 28px;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
 }
 .subTitle {
   font-size: 1.5rem;
   line-height: 33.6px;
   font-weight: 700;
-  color: #222222;
+  color: var(--primary-color-900);
 }
 .blogSection {
   display: flex;

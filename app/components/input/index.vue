@@ -55,7 +55,7 @@ export default {
   gap: 0.5rem;
 }
 .label {
-  color: #222222b2;
+  color: var(--primary-color-800);
   font-size: 0.875rem;
   font-weight: 400;
 }
@@ -64,7 +64,7 @@ export default {
   height: 3rem;
   padding: 0px 0.875rem;
   border-radius: 6.25rem;
-  border: 1px solid #6a6a6a1a;
-  color: #222222;
+  border: 1px solid var(--color-gray-100);
+  color: var(--primary-color-900);
 }
 </style>

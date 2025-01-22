@@ -28,6 +28,7 @@ The project follows a modular and well-organized structure. The application fold
 
 ## Key Folders:
 
+- assets/styles: Holds the global styling and color theme of the application.
 - components/: Contains reusable UI components.
 - layouts/: Contains all the dynamic layout for this application
 - pages/: Holds all the page route of the application.
@@ -40,24 +41,34 @@ The platform uses Nuxt.js Routing for navigation between different pages. Key ro
 
 Square brackets ([ ]): Used for dynamic routes, such as displaying single blog page.
 
-## API Source
+## API Source and State Management
 
 I leveraged the [MockAPI](https://mockapi.io/projects) to create a quick and easy REST API for the blog posts.
+State management in this Nuxt 3 application is handled using useFetch and local state.
 
-## State Management
-
-State management is handled efficiently using Nuxt 3's useFetch. This built-in tool simplifies API data fetching, caching, and synchronization, reducing the need for complex state management solutions.
+- useFetch: A powerful Nuxt 3 tool for handling data fetching, it simplifies API requests, handles responses, provides built-in caching, and integrates seamlessly with server-side rendering (SSR). This was used because the application is a simple one.
+- Local State Management: Vue's ref and reactive are used for managing component-specific states, such as controlling the current page, loading status, and blog post data.
 
 ## Styling
 
 The css scoped styles was used for styling within components. Additionally, I leverage the design library [Tailwind](https://tailwindcss.com/docs) for a consistent, accessible, and responsive user interface across the platform.
+
+## Testing
+
+Vitest is used for unit testing in this Nuxt 3 application. It helps verify the functionality and rendering of components. Tests ensure components behave as expected and handle state changes correctly. The tests are located in the tests folder. Follow the step below to run the test.
+
+- Run the command below:
+
+```bash
+npm run test
+```
 
 ## Environment Variables
 
 All sensitive data, such as API keys, credentials, and configuration details, are stored in the .env file. This file is critical for security and was not pushed to the repository. Create a .env file at the root directory.
 Ensure that the .env file is correctly set up before running the application.
 
- - Note: You will get the env sample from the ".env.example" file in the root directory. Use the url there to create your env file
+- Note: You will get the env sample from the ".env.example" file in the root directory. Use the url there to create your env file
 
 ## Conclusion
 

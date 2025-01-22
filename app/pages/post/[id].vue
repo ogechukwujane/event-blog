@@ -55,7 +55,7 @@ const { data, pending, error, refresh } = await useFetch(
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 140%;
-  color: #222222;
+  color: var(--primary-color-900);
   @media (max-width: 600px) {
     font-size: 1.25rem;
   }
@@ -64,13 +64,13 @@ const { data, pending, error, refresh } = await useFetch(
   font-size: 1rem;
   line-height: 140%;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
 }
 .imageWrap {
   width: 80%;
   height: 35rem;
   position: relative;
-  background: #6c757d;
+  background: var(--color-gray-900);
   @media (max-width: 1024px) {
     height: 25.813rem;
     width: 100%;
