@@ -1,6 +1,7 @@
 <template>
-  <h1 v-if="pending">Loading...</h1>
-  <h1 v-else-if="error">Something went wrong</h1>
+  <h1 v-if="errorMessage" class="py-[24%] px-8 text-[20px] text-center">
+    {{ errorMessage }}
+  </h1>
   <div v-else class="container mx-auto px-4 md:px-12 xl:px-0 py-8">
     <section class="heroSection">
       <div class="textWrap" v-if="blogs.length > 0">
@@ -30,10 +31,13 @@
 const currentPage = ref(1);
 const blogs = ref([]);
 const isLoading = ref(false);
+const errorMessage = ref(null);
+const loader = ref(false);
 
 const fetchBlogs = async () => {
   isLoading.value = true;
-  const { data, pending, error } = await useFetch(
+  errorMessage.value = null;
+  const { data, error } = await useFetch(
     `${useRuntimeConfig().public.baseUrl}/post?page=${
       currentPage.value
     }&limit=12`,
@@ -50,7 +54,7 @@ const fetchBlogs = async () => {
 
   if (error.value) {
     isLoading.value = false;
-    alert("Failed to fetch blogs:", error.value);
+    errorMessage.value = "Failed to fetch posts. Please try again later.";
   }
 };
 
