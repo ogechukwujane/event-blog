@@ -33,9 +33,15 @@ definePageMeta({
 });
 
 const router = useRouter();
+const username = ref("");
+const password = ref("");
 
 const handleLogin = () => {
-  router.push("/post");
+  if (username.value.trim() && password.value) {
+    router.push("/post");
+  } else {
+    alert("Please fill the form to continue");
+  }
 };
 </script>
 

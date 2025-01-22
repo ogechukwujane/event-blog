@@ -1,7 +1,7 @@
 <template>
   <div class="cardWrapper" @click="handleCardClick(blog)">
     <div class="imageWrap">
-      <span>{{ blog.category || "CATEGORY" }}</span>
+      <span>{{ blog.category}}</span>
       <img
         :src="blog.image || '/images/logo.svg'"
         alt="img"
