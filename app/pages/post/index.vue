@@ -1,6 +1,7 @@
 <template>
-  <h1 v-if="pending">Loading...</h1>
-  <h1 v-else-if="error">Something went wrong</h1>
+  <h1 v-if="errorMessage" class="py-[24%] px-8 text-[20px] text-center">
+    {{ errorMessage }}
+  </h1>
   <div v-else class="container mx-auto px-4 md:px-12 xl:px-0 py-8">
     <section class="heroSection">
       <div class="textWrap" v-if="blogs.length > 0">
@@ -30,10 +31,13 @@
 const currentPage = ref(1);
 const blogs = ref([]);
 const isLoading = ref(false);
+const errorMessage = ref(null);
+const loader = ref(false);
 
 const fetchBlogs = async () => {
   isLoading.value = true;
-  const { data, pending, error } = await useFetch(
+  errorMessage.value = null;
+  const { data, error } = await useFetch(
     `${useRuntimeConfig().public.baseUrl}/post?page=${
       currentPage.value
     }&limit=12`,
@@ -50,7 +54,7 @@ const fetchBlogs = async () => {
 
   if (error.value) {
     isLoading.value = false;
-    alert("Failed to fetch blogs:", error.value);
+    errorMessage.value = "Failed to fetch posts. Please try again later.";
   }
 };
 
@@ -65,7 +69,7 @@ const loadMore = async () => {
 
 <style scoped>
 .heroSection {
-  border-bottom: 1px solid #6a6a6a33;
+  border-bottom: 1px solid var(--color-gray-300);
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
@@ -81,19 +85,19 @@ const loadMore = async () => {
   font-size: 3rem;
   line-height: 67.2px;
   font-weight: 700;
-  color: #222222;
+  color: var(--primary-color-900);
 }
 .paragraph {
   font-size: 1.25rem;
   line-height: 28px;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
 }
 .subTitle {
   font-size: 1.5rem;
   line-height: 33.6px;
   font-weight: 700;
-  color: #222222;
+  color: var(--primary-color-900);
 }
 .blogSection {
   display: flex;

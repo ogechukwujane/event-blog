@@ -33,10 +33,10 @@ export default {
 <style>
 .button {
   border-radius: 6.25rem;
-  border: 1px solid #6a6a6acc;
+  border: 1px solid var(--color-gray-200);
   height: 3rem;
   padding: 0px 32px;
-  color: #222222b2;
+  color: var(--primary-color-800);
   font-size: 0.875rem;
   font-weight: 500;
   background: transparent;

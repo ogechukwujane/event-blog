@@ -22,17 +22,6 @@ useHead({
 </script>
 
 <style>
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  padding: 0px;
-  margin: 0px;
-}
 * {
   box-sizing: border-box;
   margin: 0px;

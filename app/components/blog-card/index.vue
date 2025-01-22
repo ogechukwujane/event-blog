@@ -1,7 +1,7 @@
 <template>
   <div class="cardWrapper" @click="handleCardClick(blog)">
     <div class="imageWrap">
-      <span>{{ blog.category || "CATEGORY" }}</span>
+      <span>{{ blog.category}}</span>
       <img
         :src="blog.image || '/images/logo.svg'"
         alt="img"
@@ -58,7 +58,7 @@ const handleCardClick = (blog) => {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  background: #6c757d;
+  background: var(--color-gray-900);
 }
 .bgImage {
   width: 100%;
@@ -66,12 +66,12 @@ const handleCardClick = (blog) => {
   position: absolute;
 }
 span {
-  color: #ffffff;
+  color: var(--color-white-900);
   font-size: 0.625rem;
   font-weight: 700;
   padding: 8px 10px;
   border-radius: 8px;
-  background: #00000025;
+  background: var(--color-black-100);
   backdrop-filter: blur(4px);
   position: absolute;
   top: 10px;
@@ -88,13 +88,13 @@ span {
   font-size: 0.75rem;
   line-height: 1.225rem;
   font-weight: 400;
-  color: #6c757d;
+  color: var(--color-gray-900);
 }
 .title {
   font-size: 1rem;
   line-height: 160%;
   font-weight: 600;
-  color: #495057;
+  color: var(--color-gray-800);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
@@ -105,7 +105,7 @@ span {
   font-size: 0.875rem;
   line-height: 140%;
   font-weight: 400;
-  color: #6c757d;
+  color: var(--color-gray-900);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 3;

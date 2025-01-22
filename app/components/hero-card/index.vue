@@ -49,7 +49,7 @@ const handleCardClick = (blog) => {
   gap: 1.125rem;
   border-radius: 24px;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--color-white-900);
   box-shadow: 6px 6px 54px 0px #0000000d;
   cursor: pointer;
   @media (max-width: 600px) {
@@ -65,7 +65,7 @@ const handleCardClick = (blog) => {
   width: 100%;
   height: 25.813rem;
   position: relative;
-  background: #6c757d;
+  background: var(--color-gray-900);
   @media (max-width: 600px) {
     height: 18.75rem;
   }
@@ -90,12 +90,12 @@ const handleCardClick = (blog) => {
   font-size: 0.875rem;
   line-height: 140%;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
 }
 .title {
   font-size: 2.063rem;
   font-weight: 500;
-  color: #222222;
+  color: var(--primary-color-900);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
@@ -109,7 +109,7 @@ const handleCardClick = (blog) => {
   font-size: 1rem;
   line-height: 160%;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 4;
@@ -122,7 +122,7 @@ const handleCardClick = (blog) => {
 .line {
   width: 100%;
   height: 1px;
-  background: #6a6a6a33;
+  background: var(--color-gray-300);
 }
 .footer {
   display: flex;
@@ -130,18 +130,18 @@ const handleCardClick = (blog) => {
   justify-content: space-between;
 }
 span {
-  color: #222222b2;
+  color: var(--primary-color-800);
   font-size: 1rem;
   font-weight: 600;
   padding: 8px 10px;
   border-radius: 8px;
-  background: #296bff0d;
+  background: var(--primary-color-700);
 }
 button {
   display: flex;
   align-items: center;
   gap: 2px;
-  color: #222222;
+  color: var(--primary-color-900);
   font-size: 1rem;
   font-weight: 500;
   background: transparent;

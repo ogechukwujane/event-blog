@@ -11,4 +11,5 @@ export default defineNuxtConfig({
       baseUrl: process.env.BASE_URL,
     },
   },
+  css: ["../app/assets/styles/global.css"],
 });

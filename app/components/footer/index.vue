@@ -66,8 +66,8 @@
 
 <style scoped>
 .wrapper {
-  background: #f9f9f9;
-  border-top: 1px solid #6a6a6a1a;
+  background: var(--color-white-800);
+  border-top: 1px solid var(--color-gray-100);
 }
 .footerWrap {
   display: flex;
@@ -121,7 +121,7 @@
 .linkText {
   font-size: 0.875rem;
   line-height: 140%;
-  color: #222222;
+  color: var(--primary-color-900);
 }
 .subTitle {
   font-size: 0.875rem;
@@ -133,7 +133,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 0 0 0;
-  border-top: 1px solid #6a6a6a1a;
+  border-top: 1px solid var(--color-gray-100);
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: unset;
@@ -149,12 +149,12 @@ span {
   width: 0.25rem;
   height: 0.25rem;
   border-radius: 1rem;
-  background: #222222b2;
+  background: var(--primary-color-800);
 }
 .footerText {
   font-size: 0.75rem;
   line-height: 1.225rem;
   font-weight: 400;
-  color: #222222b2;
+  color: var(--primary-color-800);
 }
 </style>

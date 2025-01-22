@@ -92,7 +92,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  background: #296bff0d;
+  background: var(--primary-color-700);
   width: 6.25rem;
   height: 2.75rem;
   border-radius: 2.5rem;
