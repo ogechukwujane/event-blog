@@ -22,6 +22,8 @@ npm run dev
 
 After setting up, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Use "username and password" as the login credentials to access the application.
+
 ## Project Structure
 
 The project follows a modular and well-organized structure. The application folders are housed within the app folder, with folder and file names following kebab-case naming conventions for consistency.
